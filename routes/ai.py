@@ -9,7 +9,7 @@ GROQ_API_URL = "https://api.groq.com/openai/v1/chat/completions"
 
 def call_groq_api(prompt, model="llama3-70b-8192"):
     try:
-        groq_api_key = os.getenv("GROQ_API_KEY")
+        groq_api_key = os.getenv("GROQ_API_KEY").strip()
 
         if not groq_api_key:
             raise Exception("GROQ_API_KEY not set")
