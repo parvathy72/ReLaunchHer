@@ -7,12 +7,12 @@ ai_bp = Blueprint('ai', __name__)
 GROQ_API_URL = "https://api.groq.com/openai/v1/chat/completions"
 
 
-def call_groq_api(prompt, model="llama-3.3-70b-versatile"):
+def call_groq_api(prompt, model="llama3-70b-8192"):
     try:
         groq_api_key = os.getenv("GROQ_API_KEY")
 
         if not groq_api_key:
-            raise Exception("GROQ_API_KEY not set in environment variables")
+            raise Exception("GROQ_API_KEY not set")
 
         headers = {
             "Authorization": f"Bearer {groq_api_key}",
@@ -27,13 +27,16 @@ def call_groq_api(prompt, model="llama-3.3-70b-versatile"):
         }
 
         response = requests.post(GROQ_API_URL, json=payload, headers=headers)
-        response.raise_for_status()
+
+        if response.status_code != 200:
+            print("Groq API Error:", response.status_code, response.text)
+            raise Exception(response.text)
 
         data = response.json()
         return data["choices"][0]["message"]["content"]
 
     except Exception as e:
-        print(f"Groq API Error: {str(e)}")
+        print("Groq Exception:", str(e))
         raise Exception("AI service unavailable")
 
 
