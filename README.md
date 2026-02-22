@@ -3,11 +3,11 @@
 </p>
 
 # [Project Name] 🎯
-
+RELAUNCHHER
 ## Basic Details
 
 ### Team Name: [Name]
-
+SHE BUILDS
 ### Team Members
 - Member 1: SHREYA TIUS - TOCH INSTITUTE OF SCIENCE AND TECHNOLOGY
 - Member 2: PARVATHY S - TOCH INSTITUTE OF SCIENCE AND TECHNOLOGY
@@ -165,6 +165,59 @@ Impact: Gives users a measurable Job Readiness Score with improvement suggestion
 ## Implementation
 
 ### For Software:
+For Software
+
+The project was implemented using a modular and scalable software development approach, ensuring maintainability, performance, and ease of future enhancements. The development process followed standard software engineering practices including requirement analysis, system design, development, testing, and deployment.
+
+Frontend Implementation
+
+Developed a responsive and user-friendly interface.
+
+Implemented reusable UI components for better maintainability.
+
+Integrated client-side validation to improve user experience.
+
+Connected frontend with backend services using API calls.
+
+Backend Implementation
+
+Designed RESTful APIs to handle application logic and data processing.
+
+Implemented authentication and secure data handling mechanisms.
+
+Managed server-side operations and business logic efficiently.
+
+Ensured proper error handling and request validation.
+
+Database Implementation
+
+Structured database schema for efficient data storage and retrieval.
+
+Used optimized queries to improve performance.
+
+Maintained data consistency and integrity.
+
+Integration
+
+Connected frontend, backend, and database into a unified system.
+
+Enabled smooth data flow between system components.
+
+Tested API communication and response handling.
+
+Testing & Debugging
+
+Performed functional and integration testing.
+
+Fixed bugs and optimized performance.
+
+Validated system behavior under different user scenarios.
+
+Deployment
+
+Configured the application for execution in a production-ready environment.
+
+Ensured scalability and reliability for real-world usage.
 
 #### Installation
 ```bash
