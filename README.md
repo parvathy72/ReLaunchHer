@@ -9,32 +9,97 @@
 ### Team Name: [Name]
 
 ### Team Members
-- Member 1: [Name] - [College]
-- Member 2: [Name] - [College]
+- Member 1: SHREYA TIUS - TOCH INSTITUTE OF SCIENCE AND TECHNOLOGY
+- Member 2: PARVATHY S - TOCH INSTITUTE OF SCIENCE AND TECHNOLOGY
 
 ### Hosted Project Link
 [mention your project hosted link here]
 
 ### Project Description
-[2-3 lines about what your project does]
+Re-LaunchHer is an ai powered career comeback platform designed to help women confidently restart their professional journeys after career breaks. The platform combines artificial intelligence, structured career guidance, mentorship communities, and curated job opportunities to address both professional and emotional barriers faced during workforce re-entry.
+
+Many women experience career interruptions due to caregiving responsibilities, personal commitments, or life transitions. Returning to work often brings challenges such as skill gaps, reduced confidence, and difficulty explaining career breaks. ReLaunchHer transforms these challenges into growth narratives and provides a structured pathway back into employment.
 
 ### The Problem statement
-[What problem are you solving?]
+Many women take career breaks due to caregiving responsibilities, maternity, personal health, education, or family commitments. However, when they attempt to re-enter the workforce, they face significant professional and psychological barriers that traditional job platforms fail to address.
+
+Women returning after career gaps commonly experience:
+
+Difficulty explaining career breaks during interviews
+
+Loss of professional confidence and self-belief
+
+Rapid industry skill changes leading to perceived skill gaps
+
+Lack of structured guidance for restarting careers
+
+Limited access to flexible or returnship-friendly job opportunities
+
+Absence of supportive mentorship and peer communities
+
+Existing employment platforms primarily focus on job listings rather than supporting individuals through the career comeback journey. As a result, many skilled women remain underrepresented in the workforce despite having valuable experience and potential.
+
+There is a need for a holistic platform that not only connects women to jobs but also rebuilds confidence, provides personalized career guidance, and supports their transition back into professional environments.
+
+
 
 ### The Solution
-[How are you solving it?]
+AI-Based Career Gap Reframing
+
+Uses AI to generate professional explanations for career breaks, helping users confidently communicate their experiences during interviews and applications.
+
+✅ Personalized Career Comeback Roadmap
+
+Creates customized action plans based on the user’s previous role and target career, including:
+
+Skills to update
+
+Recommended certifications
+
+Learning timelines
+
+Career preparation milestones
+
+ Interview Confidence Simulation
+
+Provides AI-generated interview practice sessions with feedback on clarity, relevance, and confidence to improve performance over time.
+
+ Career Readiness Assessment
+
+Evaluates user preparedness through a Job Readiness Score and provides targeted improvement suggestions.
+
+Women-Centric Job Discovery
+
+Offers curated opportunities including:
+
+Returnship programs
+
+Remote and flexible roles
+
+Hybrid and diversity-focused hiring options
+
+ Industry-Based Mentorship Communities
+
+Connects users with mentors and peers through moderated industry-specific communities for real-time guidance and support.
+
+ Confidence Progress Tracking
+
+Visualizes user growth and engagement, helping rebuild confidence through measurable progress
 
 ---
 
 ## Technical Details
 
 ### Technologies/Components Used
+backend- python using flask
+database-firebase
+api-groq
 
 **For Software:**
-- Languages used: [e.g., JavaScript, Python, Java]
+- Languages used: PYTHON USING FLASK
 - Frameworks used: [e.g., React, Django, Spring Boot]
 - Libraries used: [e.g., axios, pandas, JUnit]
-- Tools used: [e.g., VS Code, Git, Docker]
+- Tools used: VS Code
 
 **For Hardware:**
 - Main components: [List main components]
@@ -46,10 +111,54 @@
 ## Features
 
 List the key features of your project:
-- Feature 1: [Description]
-- Feature 2: [Description]
-- Feature 3: [Description]
-- Feature 4: [Description]
+- Feature 1: AI-Based Career Gap Reframing
+
+Analyzes a user’s career break details and generates professionally structured explanations that present the gap as a period of growth, responsibility, and learning rather than a weakness.
+
+Impact: Helps users confidently address career gaps during interviews.
+- Feature 2: Personalized Career Comeback Roadmap
+
+Creates a customized step-by-step career restart plan based on the user’s previous experience and target role.
+
+Includes:
+
+Skill upgrade recommendations
+
+Certification suggestions
+
+Learning timelines
+
+Preparation milestones
+
+Impact: Converts uncertainty into a clear action plan.
+- Feature 3: Interview Confidence Simulation
+
+Provides AI-generated interview practice sessions tailored to specific roles.
+
+Offers feedback on:
+
+Answer clarity
+
+Structure
+
+Relevance
+
+Confidence level
+
+Impact: Improves interview readiness through practice and feedback.
+- Feature 4: Career Readiness Assessment Meter
+
+Evaluates overall job preparedness using a dynamic scoring system based on:
+
+Skill updates
+
+Resume completion
+
+Interview performance
+
+Profile completeness
+
+Impact: Gives users a measurable Job Readiness Score with improvement suggestions.
 
 ---
 
@@ -59,12 +168,19 @@ List the key features of your project:
 
 #### Installation
 ```bash
-[Installation commands - e.g., npm install, pip install -r requirements.txt]
+LLAMA_API_URL=your_llama_api_url
+LLAMA_API_KEY=your_api_key_here
+FIREBASE_KEY_PATH=firebase/serviceAccountKey.json
+PORT=3000
 ```
 
 #### Run
 ```bash
-[Run commands - e.g., npm start, python app.py]
+# Activate virtual environment (Windows)
+venv\Scripts\activate
+
+# Start the backend server
+python app.py
 ```
 
 ### For Hardware:
@@ -85,12 +201,19 @@ List the key features of your project:
 
 ![Screenshot1](Add screenshot 1 here with proper name)
 *Add caption explaining what this shows*
+![WhatsApp Image 2026-02-22 at 10 53 58](https://github.com/user-attachments/assets/d20d67dd-5325-4878-98de-305a56d99902)
+
+
 
 ![Screenshot2](Add screenshot 2 here with proper name)
 *Add caption explaining what this shows*
+![WhatsApp Image 2026-02-22 at 10 53 58 (1)](https://github.com/user-attachments/assets/321be2ea-2e37-4768-935a-8444fbdae4c5)
+
 
 ![Screenshot3](Add screenshot 3 here with proper name)
 *Add caption explaining what this shows*
+![WhatsApp Image 2026-02-22 at 10 53 59](https://github.com/user-attachments/assets/93e1497f-48bc-41f5-8f10-51be8d6c5786)
+
 
 #### Diagrams
 
@@ -98,12 +221,239 @@ List the key features of your project:
 
 ![Architecture Diagram](docs/architecture.png)
 *Explain your system architecture - components, data flow, tech stack interaction*
+                    ┌──────────────────────┐
+                    │       USER            │
+                    │ (Women Returners)     │
+                    └──────────┬───────────┘
+                               │
+                               ▼
+                    ┌──────────────────────┐
+                    │      FRONTEND         │
+                    │ HTML • CSS • JS       │
+                    │ index.html            │
+                    └──────────┬───────────┘
+                               │ REST API Calls
+                               ▼
+                    ┌──────────────────────┐
+                    │       BACKEND         │
+                    │   Flask (Python)      │
+                    │----------------------│
+                    │ Auth Module           │
+                    │ User Module           │
+                    │ AI Engine             │
+                    │ Jobs Module           │
+                    │ Mentorship Module     │
+                    │ Peer Support Module   │
+                    └───────┬────────┬─────┘
+                            │        │
+                ┌───────────┘        └───────────┐
+                ▼                                ▼
+     ┌───────────────────┐           ┌────────────────────┐
+     │     Firebase       │           │     LLaMA API       │
+     │ Realtime Database  │           │  AI Text Generation │
+     │-------------------│           │--------------------│
+     │ User Profiles      │           │ Career Gap AI       │
+     │ Job Data           │           │ Interview AI        │
+     │ Progress Tracking  │           │ Roadmap Generator   │
+     └───────────────────┘           └────────────────────┘
+
+     1️⃣ Frontend Layer
+
+Technologies: HTML, CSS, JavaScript
+
+Responsibilities:
+
+User interaction
+
+Form submissions
+
+Dashboard display
+
+API communication
+
+2️⃣ Backend Layer (Flask API)
+
+Technologies: Python, Flask, REST APIs
+
+Handles:
+
+Business logic
+
+Authentication
+
+AI request processing
+
+Database operations
+
+Secure API key handling (.env)
+
+Modules:
+
+Auth Routes
+
+User Management
+
+AI Services
+
+Jobs & Opportunities
+
+Mentorship Community
+
+Peer Support
+
+3️⃣ AI Layer (LLaMA Integration)
+
+Processes:
+
+Career gap reframing
+
+Interview simulations
+
+Personalized roadmap generation
+
+Backend sends prompts → LLaMA → receives AI response → returns to frontend.
+
+4️⃣ Database Layer (Firebase)
+
+Stores:
+
+User profiles
+
+Career data
+
+Readiness scores
+
+Community interactions
+
+Job listings
 
 **Application Workflow:**
 
 ![Workflow](docs/workflow.png)
 *Add caption explaining your workflow*
+1️⃣ User Access & Registration
 
+User opens the website.
+
+Creates an account or logs in.
+
+Profile information is collected (career history, break duration, target role).
+
+Data stored in: Firebase Database.
+
+2️⃣ Profile Setup
+
+User provides:
+
+Previous job role
+
+Career break reason
+
+Skills and interests
+
+Career goals
+
+Backend saves and prepares data for AI processing.
+
+3️⃣ AI Career Analysis
+
+Frontend sends user data to backend API.
+
+Backend:
+
+Formats structured prompts
+
+Sends request to LLaMA API
+
+Receives AI-generated response
+
+AI generates:
+
+Career gap explanation
+
+Career comeback suggestions
+
+Confidence-building insights
+
+4️⃣ Personalized Roadmap Generation
+
+Backend processes AI output and creates:
+
+Skill upgrade recommendations
+
+Certification suggestions
+
+Learning timeline
+
+Preparation milestones
+
+Displayed on user dashboard.
+
+5️⃣ Interview Simulation
+
+User starts mock interview.
+
+Workflow:
+
+Backend requests AI-generated questions.
+
+User submits answers.
+
+AI evaluates responses.
+
+Feedback returned with improvement tips.
+
+6️⃣ Career Readiness Evaluation
+
+System analyzes:
+
+Profile completeness
+
+Skill updates
+
+Interview performance
+
+Activity engagement
+
+Backend calculates Job Readiness Score.
+
+7️⃣ Job & Opportunity Discovery
+
+User browses curated job listings filtered by:
+
+Returnships
+
+Remote jobs
+
+Flexible roles
+
+Hybrid opportunities
+
+Data retrieved from database.
+
+8️⃣ Mentorship & Peer Support
+
+Users join industry-based communities:
+
+Ask questions
+
+Receive mentor guidance
+
+Share resources
+
+Interactions stored securely.
+
+9️⃣ Progress Tracking
+
+Platform continuously tracks:
+
+Learning progress
+
+Interview improvement
+
+Engagement activity
+
+Confidence progress visualized on dashboard.
 ---
 
 ### For Hardware:
@@ -137,25 +487,30 @@ List the key features of your project:
 
 #### API Documentation
 
-**Base URL:** `https://api.yourproject.com`
+**Base URL:http://127.0.0.1:3000
 
 ##### Endpoints
 
 **GET /api/endpoint**
-- **Description:** [What it does]
+- **Description:** Generates personalized career comeback roadmap.
 - **Parameters:**
-  - `param1` (string): [Description]
-  - `param2` (integer): [Description]
+  - `param1` (string): {
+  "previous_role": "Software Developer",
+  "career_gap": "2 years",
+  "target_role": "Frontend Developer"
+}
+  - `param2` (integer): 
 - **Response:**
 ```json
 {
   "status": "success",
-  "data": {}
+  "roadmap": "AI generated roadmap..."
 }
-```
 
 **POST /api/endpoint**
-- **Description:** [What it does]
+- **Description:** {
+  "role": "Marketing Executive"
+}
 - **Request Body:**
 ```json
 {
@@ -166,10 +521,8 @@ List the key features of your project:
 - **Response:**
 ```json
 {
-  "status": "success",
-  "message": "Operation completed"
+  "questions": ["Tell me about yourself"]
 }
-```
 
 [Add more endpoints as needed...]
 
@@ -371,20 +724,51 @@ python script.py -v --format json data.json
 ---
 
 ## AI Tools Used (Optional - For Transparency Bonus)
+Tool Used
+
+ChatGPT
+
+Amazon Q (AI Coding Assistant)
 
 If you used AI tools during development, document them here for transparency:
 
-**Tool Used:** [e.g., GitHub Copilot, v0.dev, Cursor, ChatGPT, Claude]
+**Tool Used:**  ChatGPT, amazon q
 
 **Purpose:** [What you used it for]
 - Example: "Generated boilerplate React components"
 - Example: "Debugging assistance for async functions"
 - Example: "Code review and optimization suggestions"
+- Generated backend API structure using Flask
+
+Assisted in integrating LLaMA AI APIs
+
+Debugging server and dependency issues
+
+Environment variable and deployment configuration
+
+Documentation and README structuring
+
+Code optimization suggestions
+
+Error troubleshooting during frontend-backend integration
 
 **Key Prompts Used:**
 - "Create a REST API endpoint for user authentication"
 - "Debug this async function that's causing race conditions"
 - "Optimize this database query for better performance"
+- Create a REST API endpoint for AI-based career guidance"
+
+"Help integrate Firebase with Flask backend"
+
+"Fix CORS issue between frontend and backend"
+
+"Debug LLaMA API response error"
+
+"Generate system architecture for AI web application"
+
+"Create structured README documentation for hackathon project"
+
+"Guide deployment using Vercel"
 
 **Percentage of AI-generated code:** [Approximately X%]
 
@@ -393,27 +777,45 @@ If you used AI tools during development, document them here for transparency:
 - Custom business logic implementation
 - Integration and testing
 - UI/UX design decisions
+- System architecture design
+
+Feature ideation and problem analysis
+
+Custom AI workflow design
+
+Backend logic customization
+
+UI/UX design decisions
+
+Firebase data modeling
+
+Integration testing and validation
+
+Final deployment setup
 
 *Note: Proper documentation of AI usage demonstrates transparency and earns bonus points in evaluation!*
 
 ---
 
 ## Team Contributions
+shreya titus — Backend Development, AI Integration, API Design
 
-- [Name 1]: [Specific contributions - e.g., Frontend development, API integration, etc.]
-- [Name 2]: [Specific contributions - e.g., Backend development, Database design, etc.]
-- [Name 3]: [Specific contributions - e.g., UI/UX design, Testing, Documentation, etc.]
+parvathy s — Frontend Development, UI/UX Design, User Flow Implementation
 
+ Database Integration, Testing, Documentation & Deployment
 ---
 
 ## License
 
 This project is licensed under the [LICENSE_NAME] License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License — see the LICENSE file for details.
 
 **Common License Options:**
-- MIT License (Permissive, widely used)
-- Apache 2.0 (Permissive with patent grant)
-- GPL v3 (Copyleft, requires derivative works to be open source)
+-Simple and permissive
+
+Allows reuse and modification
+
+Commonly accepted in hackathons and open-source projects
 
 ---
 
