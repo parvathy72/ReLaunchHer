@@ -7,7 +7,7 @@ ai_bp = Blueprint('ai', __name__)
 GROQ_API_URL = "https://api.groq.com/openai/v1/chat/completions"
 
 
-def call_groq_api(prompt, model="llama3-70b-8192"):
+def call_groq_api(prompt, model="llama-3.3-70b-versatile"):
     try:
         groq_api_key = os.getenv("GROQ_API_KEY").strip()
 
